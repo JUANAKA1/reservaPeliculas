@@ -10,8 +10,11 @@ function MovieFilters() {
           <button className="text-red ">Limpiar</button>
         </div>
         <div className="flex flex-wrap gap-2">
-          {languages.map((lang) => (
-            <span className="border border-gray-200 text-red px-3 py-1 text-sm rounded hover:bg-gray-200 cursor-pointer ">
+          {languages.map((lang, i) => (
+            <span
+              key={i}
+              className="border border-gray-200 text-red px-3 py-1 text-sm rounded hover:bg-gray-200 cursor-pointer "
+            >
               {lang}
             </span>
           ))}
