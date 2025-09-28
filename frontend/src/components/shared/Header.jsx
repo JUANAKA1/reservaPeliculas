@@ -31,7 +31,7 @@ function Header() {
               {error && <p>{error}</p>}
               {location && <p>{location} &nbsp;🔽</p>}
             </div>
-            <button className="bg-[#f84464] cursor-pointer text-white px-4 py-1.5 rounded text-sm ">
+            <button className="bg-red cursor-pointer text-white px-4 py-1.5 rounded text-sm ">
               Iniciar sesion
             </button>
           </div>

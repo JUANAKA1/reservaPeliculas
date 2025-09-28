@@ -1,6 +1,14 @@
+import LiveEvents from "../components/LiveEvents";
+import BannerSlider from "../components/shared/BannerSlider";
+import Recommended from "../components/shared/Recommended";
+
 function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+      <BannerSlider />
+      <Recommended />
+      <LiveEvents />
+    </div>
+  );
 }
-export default Home
+export default Home;
