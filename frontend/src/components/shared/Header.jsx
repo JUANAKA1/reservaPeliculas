@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import mainLogo from "../../assets/main-icon.png";
 import { FaSearch } from "react-icons/fa";
+import map from "../../assets/pin.gif";
+import { LocationContext } from "../../context/LocationContext/LocationContext.jsx";
 
 function Header() {
+  const { location, loading, error } = useContext(LocationContext);
   return (
     <div className="w-full text-sm bg-white ">
       <div className="px-4 md:px-8">
@@ -21,10 +25,11 @@ function Header() {
               <FaSearch className="absolute right-2 top-2.5 text-gray-500 " />
             </div>
           </div>
-
-          <div className=" flex items-center space-x-6">
-            <div className=" text-sm font-medium mt-2 cursor-pointer ">
-              juan &nbsp;🔽
+          <div className="flex items-center space-x-6">
+            <div className="text-sm font-medium mt-2 cursor-pointer">
+              {loading && <img src={map} alt="loading..." className="size-6" />}
+              {error && <p>{error}</p>}
+              {location && <p>{location} &nbsp;🔽</p>}
             </div>
             <button className="bg-[#f84464] cursor-pointer text-white px-4 py-1.5 rounded text-sm ">
               Iniciar sesion
@@ -51,11 +56,12 @@ function Header() {
           <div className="flex items-center space-x-6 text-sm ">
             <span className="cursor-pointer hover:underline ">
               Lista de espectáculos
-            </span><span className="cursor-pointer hover:underline ">
+            </span>
+            <span className="cursor-pointer hover:underline ">
               Corporaciones
-            </span><span className="cursor-pointer hover:underline ">
-              Ofertas
-            </span><span className="cursor-pointer hover:underline ">
+            </span>
+            <span className="cursor-pointer hover:underline ">Ofertas</span>
+            <span className="cursor-pointer hover:underline ">
               Cajas de regalo
             </span>
           </div>

@@ -7,15 +7,15 @@ import Footer from "./components/shared/Footer";
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <main className="flex-grow ">
         <Header/>
+      <main className="flex-grow ">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
         </BrowserRouter>
-        <Footer/>
       </main>
+        <Footer/>
     </div>
   );
 }
