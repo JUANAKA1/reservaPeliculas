@@ -9,18 +9,18 @@ function Header() {
   return (
     <div className="w-full text-sm bg-white ">
       <div className="px-4 md:px-8">
-        <div className="max-w-screen-xl mx-auto flex justify-between items-center py-3 ">
-          <div className="flex items-center space-x-4">
+        <div className="max-w-screen-xl mx-auto flex flex-wrap justify-between items-center py-3 ">
+          <div className="flex flex-wrap items-center space-x-4">
             <img
               src={mainLogo}
               alt="logo"
               className="h-8 object-contain cursor-pointer "
             />
-            <div className="relative  ">
+            <div className="relative py-1 ">
               <input
                 type="text"
                 placeholder="Busca peliculas, eventos, deportes y actividades "
-                className="border border-gray-300 rounded px-4 py-1.5 w-[400px] text-sm outline-none "
+                className="border border-gray-300 rounded px-4 py-1.5 w-[350px] md:w-[400px] text-sm outline-none "
               />
               <FaSearch className="absolute right-2 top-2.5 text-gray-500 " />
             </div>
@@ -39,7 +39,7 @@ function Header() {
       </div>
       <div className="bg-[#f2f2f2] px-4 md:px-8 ">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center py-2 text-gray-700  ">
-          <div className="flex items-center space-x-6 font-medium">
+          <div className="flex flex-wrap items-center space-x-6 font-medium">
             <span className="cursor-pointer hover:text-red-500 ">
               Peliculas
             </span>
@@ -53,7 +53,7 @@ function Header() {
               Actividades
             </span>
           </div>
-          <div className="flex items-center space-x-6 text-sm ">
+          <div className="flex flex-wrap items-center space-x-6 text-sm ">
             <span className="cursor-pointer hover:underline ">
               Lista de espectáculos
             </span>
